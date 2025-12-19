@@ -61,8 +61,19 @@ public class Main {
 
         //полигон из вершин + текстур
         Polygon p2 = new Polygon();
-        //ArrayList
+        ArrayList<Integer> vertexIndices2 = new ArrayList<>();
+        ArrayList<Integer> textInd2 = new ArrayList<>();
+        vertexIndices2.add(0);
+        vertexIndices2.add(1);
+        vertexIndices2.add(3);
 
+        textInd2.add(0);
+        textInd2.add(1);
+        textInd2.add(2);
+        p2.setVertexIndices(vertexIndices2);
+        p2.setTextureVertexIndices(textInd2);
+
+        model.polygons.add(p2);
 
 
         objWriter writer = new objWriter();

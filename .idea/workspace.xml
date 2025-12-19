@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f76e52a-07c4-4020-a70d-a3c50bbc7a18" name="Changes" comment="добавил запись полигонов, состоящих только из вершин">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6f76e52a-07c4-4020-a70d-a3c50bbc7a18" name="Changes" comment="добавил запись полигонов, состоящих из вершин + текстур. Не дописал тесты">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/writer/objWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/writer/objWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/testOutput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/testOutput.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766136930384</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="добавил запись полигонов, состоящих из вершин + текстур. Не дописал тесты">
+      <option name="closed" value="true" />
+      <created>1766137965934</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1766137965934</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -134,6 +139,7 @@
     <MESSAGE value="написал для verticles" />
     <MESSAGE value="добавил vt + геттеры в вектор2 и вектор3 классы" />
     <MESSAGE value="добавил запись полигонов, состоящих только из вершин" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил запись полигонов, состоящих только из вершин" />
+    <MESSAGE value="добавил запись полигонов, состоящих из вершин + текстур. Не дописал тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил запись полигонов, состоящих из вершин + текстур. Не дописал тесты" />
   </component>
 </project>

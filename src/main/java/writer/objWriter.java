@@ -56,7 +56,7 @@ public class objWriter {
                     for(int i = 0;i<pol.getVertexIndices().size();i++){
                         int verIndex = pol.getVertexIndices().get(i)+1;
                         int textIndex = pol.getTextureVertexIndices().get(i)+1;
-                        writer.print(verIndex + "/"+textIndex);
+                        writer.print(verIndex + "/"+textIndex+ " ");
                     }
                     writer.println();
                 }
