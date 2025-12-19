@@ -14,12 +14,11 @@ public class objWriter {
     public void write(Model model, String path) throws IOException {
 
         //вершины v
-        for (Vector3f v : model.vertices) {
-            try (PrintWriter writer = new PrintWriter(filePath)) {
+        try (PrintWriter writer = new PrintWriter(filePath)) {
+            for (Vector3f v : model.vertices) {
+                writer.println("v " + v.getX() + " " + v.getY() + " " + v.getZ());
 
             }
-
-
         }
 
 
