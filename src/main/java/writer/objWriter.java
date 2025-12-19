@@ -3,6 +3,7 @@ package writer;
 import math.Vector2f;
 import math.Vector3f;
 import model.Model;
+import model.Polygon;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,6 +27,26 @@ public class objWriter {
             if (!model.textureVertices.isEmpty()) {
                 for (Vector2f vt : model.textureVertices) {
                     writer.println("vt " + vt.getX() + " " + vt.getY());
+                }
+            }
+
+            //нормали vn
+            if (!model.normals.isEmpty()) {
+                for (Vector3f vn : model.normals) {
+                    writer.println("vn " + vn.getX() + " " + vn.getY() + " " + vn.getZ());
+                }
+            }
+
+            //ПОЛИГОНЫ
+            for (Polygon pol : model.polygons) {
+                //только вершины
+                if (pol.getTextureVertexIndices().isEmpty() && pol.getNormalIndices().isEmpty()) {
+                    writer.print("f ");
+                    for (int v : pol.getVertexIndices()) {
+                        writer.print((v + 1) + " ");
+                    }
+                    writer.println();
+
                 }
             }
 
