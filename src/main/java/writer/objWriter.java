@@ -1,5 +1,6 @@
 package writer;
 
+import math.Vector2f;
 import math.Vector3f;
 import model.Model;
 
@@ -13,12 +14,22 @@ public class objWriter {
 
     public void write(Model model, String path) throws IOException {
 
-        //вершины v
+
         try (PrintWriter writer = new PrintWriter(filePath)) {
+
+            //вершины v
             for (Vector3f v : model.vertices) {
                 writer.println("v " + v.getX() + " " + v.getY() + " " + v.getZ());
-
             }
+
+            //текстуры vt
+            if (!model.textureVertices.isEmpty()) {
+                for (Vector2f vt : model.textureVertices) {
+                    writer.println("vt " + vt.getX() + " " + vt.getY());
+                }
+            }
+
+
         }
 
 
