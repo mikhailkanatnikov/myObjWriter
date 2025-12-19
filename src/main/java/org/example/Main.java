@@ -25,6 +25,8 @@ public class Main {
         //вершины
         Vector3f v1 = new Vector3f(1,2,3);
         Vector3f v2 = new Vector3f(4,5,6);
+        Vector3f v3 = new Vector3f(7,3,5);
+        Vector3f v4 = new Vector3f(8,7,2);
 
         //текстуры
         Vector2f vt1 = new Vector2f(7,8);
@@ -37,6 +39,8 @@ public class Main {
 
         model.vertices.add(v1);
         model.vertices.add(v2);
+        model.vertices.add(v3);
+        model.vertices.add(v4);
 
         model.textureVertices.add(vt1);
         model.textureVertices.add(vt2);
@@ -51,10 +55,13 @@ public class Main {
         vertexIndices1.add(0);
         vertexIndices1.add(1);
         vertexIndices1.add(2);
-
         p1.setVertexIndices(vertexIndices1);
 
         model.polygons.add(p1);
+
+        //полигон из вершин + текстур
+        Polygon p2 = new Polygon();
+        //ArrayList
 
 
 
