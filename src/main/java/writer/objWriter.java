@@ -64,10 +64,22 @@ public class objWriter {
                 //вершины + нормали
                 if (pol.getTextureVertexIndices().isEmpty() && !pol.getNormalIndices().isEmpty()) {
                     writer.print("f ");
-                    for (int i = 0;i<pol.getVertexIndices().size();i++){
-                        int verInd = pol.getVertexIndices().get(i)+1;
-                        int normInd = pol.getNormalIndices().get(i)+1;
+                    for (int i = 0; i < pol.getVertexIndices().size(); i++) {
+                        int verInd = pol.getVertexIndices().get(i) + 1;
+                        int normInd = pol.getNormalIndices().get(i) + 1;
                         writer.print(verInd + "//" + normInd + " ");
+                    }
+                    writer.println();
+                }
+
+                //вершины + текстуры + нормали
+                if (!pol.getTextureVertexIndices().isEmpty() && !pol.getNormalIndices().isEmpty()) {
+                    writer.print("f ");
+                    for (int i = 0; i < pol.getVertexIndices().size(); i++) {
+                        int ver = pol.getVertexIndices().get(i) + 1;
+                        int verTex = pol.getTextureVertexIndices().get(i) + 1;
+                        int normInd = pol.getNormalIndices().get(i) + 1;
+                        writer.print(ver + "/" + verTex + "/" + normInd + " ");
                     }
                     writer.println();
                 }

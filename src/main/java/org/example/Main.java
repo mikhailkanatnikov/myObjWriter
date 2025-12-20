@@ -95,6 +95,32 @@ public class Main {
 
         model.polygons.add(p3);
 
+        //полный полигон из всего
+
+        Polygon p4 = new Polygon();
+        ArrayList<Integer> vertexIndices4 = new ArrayList<>();
+        ArrayList<Integer> textVertexIndices4 = new ArrayList<>();
+        ArrayList<Integer> normalIndices4 = new ArrayList<>();
+
+
+        vertexIndices4.add(0);
+        vertexIndices4.add(1);
+        vertexIndices4.add(2);
+
+        textVertexIndices4.add(0);
+        textVertexIndices4.add(1);
+        textVertexIndices4.add(2);
+
+        normalIndices4.add(0);
+        normalIndices4.add(1);
+        normalIndices4.add(2);
+
+        p4.setVertexIndices(vertexIndices4);
+        p4.setNormalIndices(normalIndices4);
+        p4.setTextureVertexIndices(textVertexIndices4);
+
+        model.polygons.add(p4);
+
         objWriter writer = new objWriter();
         writer.write(model,path);
 
