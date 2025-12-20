@@ -60,50 +60,6 @@ public class Main {
         model.normals.add(vn2);
         model.normals.add(vn3);
 
-        //полигон только из вершин
-        Polygon p1 = new Polygon();
-        ArrayList<Integer> vertexIndices1 = new ArrayList<>();
-        vertexIndices1.add(0);
-        vertexIndices1.add(1);
-        vertexIndices1.add(2);
-        p1.setVertexIndices(vertexIndices1);
-
-        model.polygons.add(p1);
-
-        //полигон из вершин + текстур
-        Polygon p2 = new Polygon();
-        ArrayList<Integer> vertexIndices2 = new ArrayList<>();
-        ArrayList<Integer> textInd2 = new ArrayList<>();
-        vertexIndices2.add(0);
-        vertexIndices2.add(1);
-        vertexIndices2.add(3);
-
-        textInd2.add(0);
-        textInd2.add(1);
-        textInd2.add(2);
-        p2.setVertexIndices(vertexIndices2);
-        p2.setTextureVertexIndices(textInd2);
-
-        model.polygons.add(p2);
-
-        //полигон вершины + нормали
-        Polygon p3 = new Polygon();
-        ArrayList<Integer> vertexIndices3 = new ArrayList<>();
-        ArrayList<Integer> normalIndices = new ArrayList<>();
-
-        vertexIndices3.add(0);
-        vertexIndices3.add(1);
-        vertexIndices3.add(2);
-
-        normalIndices.add(0);
-        normalIndices.add(1);
-        normalIndices.add(2);
-
-        p3.setVertexIndices(vertexIndices3);
-        p3.setNormalIndices(normalIndices);
-
-        model.polygons.add(p3);
-
         //полный полигон из всего
 
         Polygon p4 = new Polygon();
