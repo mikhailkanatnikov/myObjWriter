@@ -3,11 +3,12 @@ package org.example;
 import math.Vector2f;
 import math.Vector3f;
 import model.Model;
+import readerTeacher.ObjReader;
+import readerTeacher.ObjReaderException;
 
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import model.Polygon;
@@ -17,9 +18,17 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        String path = "C:\\Users\\Asus\\Desktop\\УЧОБА\\ВУЗ_2 курс\\компГрафика\\CGVSU-main\\Task2\\myObjWriter\\src\\main\\testOutput.txt";
 
+        String path1 = "C:\\Users\\Asus\\Downloads\\Torus (1).obj";
+        String pathToSave = "C:\\Users\\Asus\\Desktop\\торус_мой.obj";
 
+        String fileContent = new String(Files.readAllBytes(Paths.get(path1)));
+        Model teapot = ObjReader.read(fileContent);
+
+        objWriter writer = new objWriter();
+        writer.write(teapot,pathToSave);
+
+/*
         Model model = new Model();
 
         //вершины
@@ -123,7 +132,7 @@ public class Main {
 
         objWriter writer = new objWriter();
         writer.write(model,path);
-
+*/
 
     }
 }

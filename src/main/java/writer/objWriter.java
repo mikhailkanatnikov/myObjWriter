@@ -10,13 +10,12 @@ import java.io.PrintWriter;
 
 public class objWriter {
 
-    public String filePath = "C:\\Users\\Asus\\Desktop\\УЧОБА\\ВУЗ_2 курс\\компГрафика\\CGVSU-main\\Task2\\myObjWriter\\src\\main\\testOutput.txt";
 
 
     public void write(Model model, String path) throws IOException {
 
 
-        try (PrintWriter writer = new PrintWriter(filePath)) {
+        try (PrintWriter writer = new PrintWriter(path)) {
 
             //вершины v
             for (Vector3f v : model.vertices) {
