@@ -36,6 +36,7 @@ public class Main {
         //нормали
         Vector3f vn1 = new Vector3f(13,14,15);
         Vector3f vn2 = new Vector3f(16,17,18);
+        Vector3f vn3 = new Vector3f(2,4,1);
 
         model.vertices.add(v1);
         model.vertices.add(v2);
@@ -48,6 +49,7 @@ public class Main {
 
         model.normals.add(vn1);
         model.normals.add(vn2);
+        model.normals.add(vn3);
 
         //полигон только из вершин
         Polygon p1 = new Polygon();
@@ -75,6 +77,23 @@ public class Main {
 
         model.polygons.add(p2);
 
+        //полигон вершины + нормали
+        Polygon p3 = new Polygon();
+        ArrayList<Integer> vertexIndices3 = new ArrayList<>();
+        ArrayList<Integer> normalIndices = new ArrayList<>();
+
+        vertexIndices3.add(0);
+        vertexIndices3.add(1);
+        vertexIndices3.add(2);
+
+        normalIndices.add(0);
+        normalIndices.add(1);
+        normalIndices.add(2);
+
+        p3.setVertexIndices(vertexIndices3);
+        p3.setNormalIndices(normalIndices);
+
+        model.polygons.add(p3);
 
         objWriter writer = new objWriter();
         writer.write(model,path);
