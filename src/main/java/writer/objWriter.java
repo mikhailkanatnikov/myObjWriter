@@ -13,6 +13,14 @@ public class objWriter {
 
     public void write(Model model, String path) throws IOException {
 
+        if (model==null){
+            throw new IllegalArgumentException("Модель не может быть null");
+        }
+
+        if (path==null || path.trim().isEmpty()){
+            throw new IllegalArgumentException("Путь не может быть null");
+        }
+
 
         try (PrintWriter writer = new PrintWriter(path)) {
 
