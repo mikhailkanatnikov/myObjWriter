@@ -5,14 +5,13 @@ import math.Vector3f;
 import model.Model;
 import readerTeacher.ObjReader;
 import readerTeacher.ObjReaderException;
-
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-
 import model.Polygon;
 import writer.objWriter;
+
 
 public class Main {
 

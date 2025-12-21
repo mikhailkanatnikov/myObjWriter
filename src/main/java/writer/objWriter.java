@@ -4,7 +4,6 @@ import math.Vector2f;
 import math.Vector3f;
 import model.Model;
 import model.Polygon;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
